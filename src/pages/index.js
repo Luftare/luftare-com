@@ -1,11 +1,29 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+import { media } from '../styles'
+
+const Button = styled.button`
+  background-color: ${props => props.theme.primaryBackground};
+  color: ${props => props.theme.primary};
+  padding: 16px;
+  border: none;
+
+  :hover {
+    color: red;
+  }
+
+  ${media.desktop`
+    padding: 32px;
+  `};
+`
 
 const IndexPage = () => (
   <div>
     <h1>Hi</h1>
     <p>Not so much here.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Button>JAU!</Button>
+    <Link to="/contact/">Contact</Link>
   </div>
 )
 
