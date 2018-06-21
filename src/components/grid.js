@@ -3,13 +3,26 @@ import styled from 'styled-components'
 import { media } from '../styles'
 
 export default styled.div`
-  background: lightblue;
   display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: 1fr;
-  ${media.tablet`
-    grid-gap: 32px;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr minmax(100px, 1200px) 1fr;
+  grid-template-columns: ${props =>
+    props.wide ? '0 auto 0' : '80px auto 8px'};
+  grid-auto-flow: column;
+  ${media.desktop`
+    grid-template-columns: ${props =>
+      props.wide ? '0 auto 0' : '1fr 6fr 1fr'};
   `};
+
+  > * {
+    grid-column: 2 / 3;
+  }
+
+  ${props =>
+    props.col1
+      ? `
+        > * {
+          grid-column: 1 / 2;
+        }`
+      : ''};
+
+  ${props => (props.centerItems ? 'justify-items: center;' : '')};
 `

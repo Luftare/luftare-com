@@ -2,29 +2,34 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Grid from '../components/grid'
+import Section from '../components/section'
 import { media } from '../styles'
 
-const Button = styled.button`
-  background-color: ${props => props.theme.primaryBackground};
-  color: ${props => props.theme.primary};
-  padding: 16px;
-  border: none;
-
-  :hover {
-    color: red;
-  }
-
-  ${media.desktop`
-    padding: 32px;
+const HeroText = styled.div`
+  font-size: 2em;
+  ${media.tablet`
+    font-size: 3em;
   `};
+`
+
+const Iframe = styled.iframe`
+  border: none;
+  width: 100%;
+  display: block;
+  height: 70vh;
+  z-index: 1000;
 `
 
 const IndexPage = () => (
   <Grid>
-    <h1>Hi</h1>
-    <p>Not so much here.</p>
-    <Button>JAU!</Button>
-    <Link to="/contact/">Contact</Link>
+    <Section airy>
+      <HeroText>
+        a <b>developer & musician</b> at your service
+      </HeroText>
+    </Section>
+    <Section wide>
+      <Iframe src="https://luftare.tk/bunny/" />
+    </Section>
   </Grid>
 )
 

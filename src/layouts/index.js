@@ -20,7 +20,7 @@ const Layout = ({ children, data }) => (
         ]}
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
       />
-      <Header>{data.site.siteMetadata.title}</Header>
+      <Header />
       <main>{children()}</main>
       <Footer>{data.site.siteMetadata.footerText}</Footer>
     </div>

@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Grid from './grid'
 
 export default styled.div`
-  background: black;
-  color: white;
-  padding: 32px 16px;
-  margin-bottom: 32px;
+  background: ${props => props.theme.black};
+  color: ${props => props.theme.grey};
+  padding: ${props => props.theme.gutter.l} 16px;
+  text-align: center;
 `

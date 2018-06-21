@@ -1,6 +1,6 @@
-import { css } from 'styled-components'
+import { css, keyframes } from 'styled-components'
 
-const sizes = {
+export const sizes = {
   desktop: 1090,
   tablet: 600,
 }
@@ -16,6 +16,32 @@ export const media = Object.keys(sizes).reduce((accumulator, label) => {
 }, {})
 
 export const theme = {
-  primary: '#bada55',
+  primary: '#2e9',
   primaryBackground: '#ffe',
+  white: '#fff',
+  black: '#222',
+  grey: '#777',
+  gutter: {
+    m: '32px',
+    l: '80px',
+    xl: '240px',
+  },
 }
+
+export const slideFromLeft = keyframes`
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`
+
+export const slideFromTop = keyframes`
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`
