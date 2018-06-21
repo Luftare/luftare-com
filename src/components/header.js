@@ -19,9 +19,6 @@ const Logo = styled.div`
   animation: ${props => (props.aside ? slideFromLeft : slideFromTop)} 300ms;
   margin-top: ${props =>
     props.aside ? props.theme.gutter.m : props.theme.gutter.l};
-  ${media.tablet`
-    // margin-left: ${props => (props.aside ? props.theme.gutter.m : 0)};
-  `};
 `
 
 export default class Header extends React.Component {
@@ -30,19 +27,28 @@ export default class Header extends React.Component {
 
     this.state = {
       logoAside: false,
+      width: 1400,
     }
+  }
+
+  componentDidMount = () => {
     window.addEventListener('scroll', () => {
       const isMobile = innerWidth < sizes.tablet
-      let logoAside = document.documentElement.scrollTop > 50
+      let logoAside = document.documentElement.scrollTop > 20
 
       if (this.state.logoAside !== logoAside) {
         this.setState({ logoAside })
+      }
+
+      const width = innerWidth
+      if (this.state.width !== width) {
+        this.setState({ width })
       }
     })
   }
 
   render() {
-    const isDesktop = innerWidth > sizes.desktop
+    const isDesktop = this.state.width > sizes.desktop
     return (
       <Sticky relative={!this.state.logoAside}>
         <Grid
