@@ -14,7 +14,8 @@ const HeroText = styled.div`
 
 const Iframe = styled.iframe`
   border: none;
-  width: 100%;
+  width: 1px;
+  min-width: 100%;
   display: block;
   height: 70vh;
   z-index: 1000;
@@ -28,7 +29,7 @@ const IndexPage = () => (
       </HeroText>
     </Section>
     <Section wide>
-      <Iframe src="https://luftare.tk/bunny/" />
+      <Iframe src="https://luftare.tk/bunny" scrolling="no"/>
     </Section>
   </Grid>
 )
