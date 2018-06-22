@@ -5,6 +5,11 @@ import Grid from '../components/grid'
 import Section from '../components/section'
 import { media } from '../styles'
 
+import cloudbunnySrc from '../assets/cloudbunny.png'
+import drum from '../assets/drum.png'
+import sail from '../assets/sail.png'
+import threed from '../assets/threed.png'
+
 const HeroText = styled.div`
   font-size: 2em;
   ${media.tablet`
@@ -12,13 +17,12 @@ const HeroText = styled.div`
   `};
 `
 
-const Iframe = styled.iframe`
-  border: none;
-  width: 1px;
-  min-width: 100%;
-  display: block;
-  height: 70vh;
-  z-index: 1000;
+const Image = styled.img`
+  width: 100%;
+  vertical-align: bottom;
+  ${media.tablet`
+
+  `}
 `
 
 const IndexPage = () => (
@@ -29,7 +33,10 @@ const IndexPage = () => (
       </HeroText>
     </Section>
     <Section wide>
-      <Iframe src="https://luftare.tk/bunny" scrolling="no"/>
+      <Image src={cloudbunnySrc}/>
+      <Image src={threed}/>
+      <Image src={sail}/>
+      <Image src={drum}/>
     </Section>
   </Grid>
 )

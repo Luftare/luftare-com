@@ -28,6 +28,7 @@ export default class Header extends React.Component {
     this.state = {
       logoAside: false,
       width: 1400,
+      hasScrolled: false,
     }
   }
 
@@ -37,7 +38,7 @@ export default class Header extends React.Component {
       let logoAside = (document.scrollingElement || document.documentElement).scrollTop > 20
 
       if (this.state.logoAside !== logoAside) {
-        this.setState({ logoAside })
+        this.setState({ logoAside, hasScrolled: true })
       }
 
       const width = innerWidth
