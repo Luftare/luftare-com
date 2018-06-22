@@ -9,14 +9,16 @@ const Sticky = styled.div`
   width: 100%;
   top: 0;
   left: 0;
+  pointer-events: none;
 `
 
 const Logo = styled.div`
+  pointer-events: auto;
   background-color: ${props => props.theme.primary};
   display: inline-block;
   color: ${props => props.theme.white};
   padding: 16px;
-  animation: ${props => (props.aside ? slideFromLeft : 'none')} 300ms;
+  animation: ${props => (props.aside ? slideFromLeft : 'none')} 400ms;
   margin-top: ${props =>
     props.aside ? 0 : props.theme.gutter.l};
   ${media.desktop`

@@ -7,6 +7,10 @@ export default styled.div`
   grid-template-columns: ${props =>
     props.wide ? '0 auto 0' : '80px auto 8px'};
   grid-auto-flow: column;
+  ${media.tablet`
+    grid-template-columns: ${props =>
+      props.wide ? '0 auto 0' : '80px auto 80px'};
+  `}
   ${media.desktop`
     grid-template-columns: ${props =>
       props.wide ? '0 auto 0' : '1fr 6fr 1fr'};

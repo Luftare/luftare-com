@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Grid from '../components/grid'
 import Section from '../components/section'
+import MusicBox from '../components/musicbox'
 import { media } from '../styles'
 
 import cloudbunnySrc from '../assets/cloudbunny.png'
@@ -44,6 +45,9 @@ const IndexPage = () => (
       <Image src={threed}/>
       <Image src={sail}/>
       <Image src={drum}/>
+    </Section>
+    <Section >
+      <MusicBox />
     </Section>
   </Grid>
 )
