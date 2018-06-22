@@ -16,7 +16,7 @@ const Logo = styled.div`
   display: inline-block;
   color: ${props => props.theme.white};
   padding: 16px;
-  animation: ${props => (props.aside ? slideFromLeft : slideFromTop)} 300ms;
+  animation: ${props => (props.aside ? slideFromLeft : 'none')} 300ms;
   margin-top: ${props =>
     props.aside ? 0 : props.theme.gutter.l};
   ${media.desktop`
