@@ -35,7 +35,8 @@ export default class Header extends React.Component {
   componentDidMount = () => {
     window.addEventListener('scroll', () => {
       const isMobile = innerWidth < sizes.tablet
-      let logoAside = (document.scrollingElement || document.documentElement).scrollTop > 20
+      const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
+      let logoAside = scrollTop > 20
 
       if (this.state.logoAside !== logoAside) {
         this.setState({ logoAside, hasScrolled: true })
@@ -45,6 +46,7 @@ export default class Header extends React.Component {
       if (this.state.width !== width) {
         this.setState({ width })
       }
+      console.log('scrolling... ', this, width, scrollTop, logoAside);
     })
   }
 
