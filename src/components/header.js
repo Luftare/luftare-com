@@ -18,7 +18,11 @@ const Logo = styled.div`
   padding: 16px;
   animation: ${props => (props.aside ? slideFromLeft : slideFromTop)} 300ms;
   margin-top: ${props =>
-    props.aside ? props.theme.gutter.m : props.theme.gutter.l};
+    props.aside ? 0 : props.theme.gutter.l};
+  ${media.desktop`
+    margin-top: ${props =>
+      props.aside ? props.theme.gutter.m : props.theme.gutter.l};
+  `}
 `
 
 export default class Header extends React.Component {
@@ -46,7 +50,6 @@ export default class Header extends React.Component {
       if (this.state.width !== width) {
         this.setState({ width })
       }
-      console.log('scrolling... ', this, width, scrollTop, logoAside);
     })
   }
 

@@ -17,11 +17,18 @@ const HeroText = styled.div`
   `};
 `
 
-const Image = styled.img`
-  width: 100%;
+const Image = styled.div`
   vertical-align: bottom;
+  display: inline-block;
+  width: 100%;
+  height: 80vw;
+  background-image: url('${props => props.src}');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   ${media.tablet`
-
+    width: 50%;
+    height: 40vw;
   `}
 `
 
