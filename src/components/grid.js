@@ -4,6 +4,7 @@ import { media } from '../styles'
 
 export default styled.div`
   display: grid;
+  width: 100%;
   grid-template-columns: ${props =>
     props.wide ? '0 auto 0' : '80px auto 8px'};
   grid-auto-flow: column;

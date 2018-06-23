@@ -9,17 +9,21 @@ const Container = styled.div`
 `
 
 const TrackList = styled.div`
+  position: sticky;
+  bottom: 0;
   > *:not(:last-child) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 `
 
 const Track = styled.div`
+  position: ${props => props.playing ? 'sticky' : 'relative'};
+  bottom: 0;
   display: flex;
   align-items: center;
   padding: 16px 4px;
   vertical-align: center;
-  color: ${props => props.playing ? props.theme.primary : props.theme.black}
+  color: ${props => props.playing ? props.theme.primary : props.theme.black};
   cursor: pointer;
   transition: all 100ms;
   ${media.tablet`

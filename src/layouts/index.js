@@ -18,7 +18,10 @@ const Layout = ({ children, data }) => (
           { name: 'description', content: "Luftare's homepage" },
           { name: 'keywords', content: 'Luftare, website' },
         ]}
-        link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
+        link={[
+          { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
+          { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat}' }
+        ]}
       />
       <Header />
       <main>{children()}</main>

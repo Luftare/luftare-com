@@ -21,7 +21,7 @@ const HeroText = styled.div`
 
 const Image = styled.div`
   vertical-align: bottom;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   display: inline-flex;
   width: 100%;
@@ -37,13 +37,15 @@ const Image = styled.div`
 `
 
 const TextBox = styled.span`
+  box-sizing: border-box;
   font-size: 2em;
   color: ${props => props.theme.black};
-  padding: 16px 24px;
+  padding: ${props => props.noPaddingX ? '16px 0' : '16px 24px'};
   background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
   ${media.tablet`
     font-size: 3em;
-    padding: 24px 36px;
+    padding: ${props => props.noPaddingX ? '24px 0' : '24px 36px'};
   `}
 `
 
@@ -59,12 +61,18 @@ const IndexPage = () => (
       <Image src={threed}/>
       <Image src={sail}/>
       <Image src={drum}/>
-      <Image src={music} wide >
-        <TextBox>music</TextBox>
+      <Image src={music} wide>
+        <Grid wide>
+          <TextBox noPaddingX>
+            <Grid >
+            <span>music</span>
+            </Grid>
+          </TextBox>
+        </Grid>
+
       </Image>
     </Section>
-
-    <Section >
+    <Section>
       <MusicBox />
     </Section>
   </Grid>
