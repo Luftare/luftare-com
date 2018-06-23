@@ -60,7 +60,7 @@ const IndexPage = () => (
       <Image src={sail}/>
       <Image src={drum}/>
       <Image src={music} wide >
-        <TextBox>sounds</TextBox>
+        <TextBox>music</TextBox>
       </Image>
     </Section>
 
