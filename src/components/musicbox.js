@@ -161,7 +161,7 @@ export default class MusicBox extends React.Component {
         },
         {
           src: 'https://firebasestorage.googleapis.com/v0/b/nuxt-list.appspot.com/o/Guitar.wav?alt=media&token=a8bb74ce-66d4-40e8-8fc8-8d2223ffa444',
-          name: 'Pathos',
+          name: 'Hope',
           tags: ['Guitar']
         }
       ]
