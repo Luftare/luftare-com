@@ -44,6 +44,10 @@ const TextBox = styled.span`
   background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
   ${media.tablet`
+    font-size: 2.2em;
+    padding: ${props => props.noPaddingX ? '16px 0' : '16px 24px'};
+  `}
+  ${media.desktop`
     font-size: 3em;
     padding: ${props => props.noPaddingX ? '24px 0' : '24px 36px'};
   `}
