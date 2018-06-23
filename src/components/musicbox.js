@@ -5,7 +5,7 @@ import Grid from './grid'
 import { media } from '../styles'
 
 const Container = styled.div`
-  padding: 32px;
+  padding: 32px 0;
 `
 
 const TrackList = styled.div`
@@ -43,6 +43,15 @@ const Play = styled.div`
   cursor: pointer;
 `
 
+const triangleRotate = keyframes`
+  0% {
+    transform: rotateZ(0deg) translateX(17%) scaleY(0.6);
+  }
+  100% {
+    transform:  rotateZ(360deg) translateX(17%) scaleY(0.6);
+  }
+`
+
 const Triangle = styled.div`
   display: inline-block;
   width: 0;
@@ -51,6 +60,10 @@ const Triangle = styled.div`
   border-bottom: ${props => props.size ? props.size : '20px'} solid transparent;
   border-left: ${props => props.size ? props.size : '20px'} solid ${props => props.accent? props.theme.primary : props.theme.black};
   margin-right: 4px;
+  ${props => props.loading ? `
+    animation: ${triangleRotate} 1.3s infinite;
+    animation-timing-function: linear;
+  ` : ''}
   transform: translateX(17%) scaleY(0.6);
 `
 
@@ -60,11 +73,15 @@ const Block = styled.div`
   height: 18px;
   margin-left: 3px;
   background-color: ${props => props.theme.black};
-  transform: translate(-3px, 10%) scaleY(0.6);
+  transform: translate(-3px, 0%) scaleY(0.6);
+`
+
+const Blocks = styled.span`
+  display: flex;
 `
 
 const TrackText = styled.span`
-  margin-left: 16px;
+  margin-left: 12px;
 `
 
 const TrackTag = styled.span`
@@ -83,7 +100,8 @@ export default class MusicBox extends React.Component {
 
     this.state = {
       playing: false,
-      currentTrackIndex: 0,
+      loading: false,
+      currentTrackIndex: null,
       tracks: []
     }
   }
@@ -92,6 +110,12 @@ export default class MusicBox extends React.Component {
     this.audioElement = this.refs.audio;
     this.audioElement.addEventListener('ended', () => {
       this.setState({ playing: false });
+    });
+    this.audioElement.addEventListener('canplay', () => {
+      if(this.state.loading) {
+        this.setState({ playing: true, loading: false });
+        this.audioElement.play();
+      }
     });
     this.setState({
       tracks: [
@@ -113,7 +137,7 @@ export default class MusicBox extends React.Component {
         {
           src: 'https://firebasestorage.googleapis.com/v0/b/nuxt-list.appspot.com/o/Corporate.wav?alt=media&token=51065fe8-059b-461f-b506-90d09d7ea0ca',
           name: 'Horizons',
-          tags: ['Corporate']
+          tags: ['Cheerful']
         },
         {
           src: 'https://firebasestorage.googleapis.com/v0/b/nuxt-list.appspot.com/o/Hybrid.wav?alt=media&token=c64dda47-3a1b-40b6-ba27-ea5679e7d208',
@@ -148,17 +172,19 @@ export default class MusicBox extends React.Component {
     if(this.state.currentTrackIndex === index) {
       if(this.state.playing) {
         this.audioElement.pause();
-        this.setState({ playing: false })
+        this.setState({ playing: false, loading: false })
       } else {
-        this.audioElement.play();
-        this.setState({ playing: true })
+        if(this.state.loading) {
+          this.setState({ playing: false, loading: false })
+        } else {
+          this.audioElement.play();
+          this.setState({ playing: true })
+        }
       }
     } else {
-      this.setState({ currentTrackIndex: index, playing: true })
+      this.setState({ currentTrackIndex: index, playing: false, loading: true })
       setTimeout(() => {
         this.audioElement.load();
-        this.audioElement.currentTime = 0;
-        this.audioElement.play();
       }, 0);
     }
   }
@@ -173,8 +199,8 @@ export default class MusicBox extends React.Component {
           {this.state.tracks.map((track, i) => (
             <Track key={i} playing={this.state.currentTrackIndex === i && this.state.playing} onClick={() => this.toggleTrack(i)}>
               {this.state.currentTrackIndex === i && this.state.playing
-                ? <span><Block /><Block /></span>
-                : <Triangle size='10px' inline />
+                ? <Blocks><Block /><Block /></Blocks>
+                : <Triangle size='10px' inline loading={this.state.currentTrackIndex === i && this.state.loading} />
               }
               <TrackText>{track.name}</TrackText>
               {track.tags.map(tag => (
