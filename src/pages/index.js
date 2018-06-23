@@ -62,14 +62,11 @@ const IndexPage = () => (
       <Image src={sail}/>
       <Image src={drum}/>
       <Image src={music} wide>
-        <Grid wide>
-          <TextBox noPaddingX>
-            <Grid >
+        <TextBox noPaddingX>
+          <Grid>
             <span>music</span>
-            </Grid>
-          </TextBox>
-        </Grid>
-
+          </Grid>
+        </TextBox>
       </Image>
     </Section>
     <Section>
