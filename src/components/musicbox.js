@@ -111,7 +111,7 @@ export default class MusicBox extends React.Component {
     this.audioElement.addEventListener('ended', () => {
       this.setState({ playing: false });
     });
-    this.audioElement.addEventListener('canplay', () => {
+    this.audioElement.addEventListener('canplaythrough', () => {
       if(this.state.loading) {
         this.setState({ playing: true, loading: false });
         this.audioElement.play();
