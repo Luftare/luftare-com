@@ -8,9 +8,11 @@ import { media } from '../styles'
 
 import cloudbunnySrc from '../assets/cloudbunny.png'
 import drum from '../assets/drum.png'
-import sail from '../assets/sail.png'
 import threed from '../assets/threed.png'
 import music from '../assets/music.jpg'
+import pirkko from '../assets/pirkko.png'
+import hearing from '../assets/hearing.png'
+import minigolf from '../assets/minigolf.png'
 
 const HeroText = styled.div`
   font-size: 2em;
@@ -63,8 +65,10 @@ const IndexPage = () => (
     <Section wide>
       <Image src={cloudbunnySrc}/>
       <Image src={threed}/>
-      <Image src={sail}/>
+      <Image src={hearing}/>
       <Image src={drum}/>
+      <Image src={minigolf}/>
+      <Image src={pirkko}/>
       <Image src={music} wide>
         <TextBox noPaddingX>
           <Grid>
