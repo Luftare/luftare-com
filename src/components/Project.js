@@ -102,7 +102,7 @@ const Overlay = styled.div`
   padding: 80px;
   padding-right: 10px;
   box-sizing: border-box;
-  background-color: rgba(255,255,255, 0.75);
+  background-color: rgba(255,255,255, 0.85);
   transition: opacity 250ms;
 
   ${media.tablet`

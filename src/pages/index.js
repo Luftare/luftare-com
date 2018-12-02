@@ -69,13 +69,40 @@ const projects = [
     imageSrc: cloudbunnySrc,
   },
   {
-    title: 'Cloud Bunnyz game',
-    description: 'I wanted to see how close to native mobile gaming feel I could get with a browser game. Vue is used to render the menu on top of an html canvas.  I have produced all the graphics and sounds.',
-    link: 'https://luftare.tk/bunny/',
-    icons: ['html5', 'vue', 'howler'],
-    imageSrc: cloudbunnySrc,
+    title: '3d',
+    description: 'I wrote a 3d rendering engine out of curiosity. The rendering is powered by html 2d canvas leaving all the trigonometry and geometry puzzles for me to solve.',
+    link: 'https://luftare.tk/3d/',
+    icons: ['html5'],
+    imageSrc: threed,
   },
-
+  {
+    title: 'Hearing test',
+    description: 'The test generates a report of both ears\' spectral sensitivity. The test has proven to produce highly correlating results compared to tests conducted by healthcare professionals.',
+    link: 'https://www.heartest.tk/',
+    icons: ['html5', 'audio'],
+    imageSrc: hearing,
+  },
+  {
+    title: 'Drum machine',
+    description: 'A simple drum sampler. Tap the pads to trigger drum sounds or record a beat on the fly. Includes metronome undo and change of tempo.',
+    link: 'https://luftare.tk/drum/',
+    icons: ['react', 'audio'],
+    imageSrc: drum,
+  },
+  {
+    title: 'Minigolf adventure game',
+    description: 'What happens when a minigolf game and an RPG game is crossbred?',
+    link: 'https://luftare.github.io/wall-bounce/',
+    icons: ['vue'],
+    imageSrc: minigolf,
+  },
+  {
+    title: 'Crazy music generator',
+    description: 'I believe that in order to produce crazy sounding music you need crazy instruments. I have synthesised all the drum sounds with web audio api.',
+    link: 'https://trusting-sinoussi-6c3faf.netlify.com/',
+    icons: ['react', 'audio'],
+    imageSrc: noisebox,
+  },
 ]
 
 const IndexPage = () => (
@@ -89,13 +116,7 @@ const IndexPage = () => (
       {projects.map((project) => (
         <Project key={project.title} {...project} />
         ))}
-      <Image src={cloudbunnySrc}/>
-      <Image src={threed}/>
-      <Image src={hearing}/>
-      <Image src={drum}/>
-      <Image src={minigolf}/>
       <Image src={pirkko}/>
-      <Image src={noisebox}/>
       <Image src={lfbg}/>
       <Image src={spaceship}/>
       <Image src={aipong}/>
