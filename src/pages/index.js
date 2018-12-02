@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Grid from '../components/grid'
 import Section from '../components/section'
@@ -13,6 +12,11 @@ import music from '../assets/music.jpg'
 import pirkko from '../assets/pirkko.png'
 import hearing from '../assets/hearing.png'
 import minigolf from '../assets/minigolf.png'
+import lfbg from '../assets/lfbg.png'
+import noisebox from '../assets/noisebox.png'
+import aipong from '../assets/aipong.png'
+import spaceship from '../assets/spaceship.png'
+
 
 const HeroText = styled.div`
   font-size: 2em;
@@ -69,6 +73,10 @@ const IndexPage = () => (
       <Image src={drum}/>
       <Image src={minigolf}/>
       <Image src={pirkko}/>
+      <Image src={noisebox}/>
+      <Image src={lfbg}/>
+      <Image src={spaceship}/>
+      <Image src={aipong}/>
       <Image src={music} wide>
         <TextBox noPaddingX>
           <Grid>
