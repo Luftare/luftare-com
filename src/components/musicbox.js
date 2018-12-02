@@ -204,7 +204,7 @@ export default class MusicBox extends React.Component {
               }
               <TrackText>{track.name}</TrackText>
               {track.tags.map(tag => (
-                <TrackTag>{tag}</TrackTag>
+                <TrackTag key={tag}>{tag}</TrackTag>
               ))}
             </Track>
           ))

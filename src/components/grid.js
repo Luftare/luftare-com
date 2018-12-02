@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { media } from '../styles'
 
 export default styled.div`
+  z-index: -1;
   display: grid;
   width: 100%;
   grid-template-columns: ${props =>

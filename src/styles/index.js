@@ -2,7 +2,7 @@ import { css, keyframes } from 'styled-components'
 
 export const sizes = {
   desktop: 1090,
-  tablet: 600,
+  tablet: 950,
 }
 
 export const media = Object.keys(sizes).reduce((accumulator, label) => {

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Grid from '../components/grid'
 import Section from '../components/section'
 import MusicBox from '../components/musicbox'
+import Project from '../components/Project'
 import { media } from '../styles'
 
 import cloudbunnySrc from '../assets/cloudbunny.png'
@@ -59,6 +60,24 @@ const TextBox = styled.span`
   `}
 `
 
+const projects = [
+  {
+    title: 'Cloud Bunny game',
+    description: 'I wanted to see how close to native mobile gaming feel I could get with a browser game. Vue is used to render the menu on top of an html canvas.  I have produced all the graphics and sounds.',
+    link: 'https://luftare.tk/bunny/',
+    icons: ['html5', 'vue', 'howler'],
+    imageSrc: cloudbunnySrc,
+  },
+  {
+    title: 'Cloud Bunnyz game',
+    description: 'I wanted to see how close to native mobile gaming feel I could get with a browser game. Vue is used to render the menu on top of an html canvas.  I have produced all the graphics and sounds.',
+    link: 'https://luftare.tk/bunny/',
+    icons: ['html5', 'vue', 'howler'],
+    imageSrc: cloudbunnySrc,
+  },
+
+]
+
 const IndexPage = () => (
   <Grid>
     <Section airy>
@@ -67,6 +86,9 @@ const IndexPage = () => (
       </HeroText>
     </Section>
     <Section wide>
+      {projects.map((project) => (
+        <Project key={project.title} {...project} />
+        ))}
       <Image src={cloudbunnySrc}/>
       <Image src={threed}/>
       <Image src={hearing}/>

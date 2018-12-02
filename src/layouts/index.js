@@ -24,7 +24,7 @@ const Layout = ({ children, data }) => (
         ]}
       />
       <Header />
-      <main>{children()}</main>
+      <main style={{zIndex: -1}}>{children()}</main>
       <Footer>{data.site.siteMetadata.footerText}</Footer>
     </div>
   </ThemeProvider>

@@ -10,6 +10,7 @@ const Sticky = styled.div`
   top: 0;
   left: 0;
   pointer-events: none;
+  z-index: 9999;
 `
 
 const Logo = styled.div`
