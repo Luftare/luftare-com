@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';import { media } from '../styles'
+import React from 'react'
+import styled from 'styled-components'
+import { media } from '../styles'
 import gatsbyLogo from '../assets/gatsby-logo.png'
 import reactLogo from '../assets/react-logo.png'
 import audioLogo from '../assets/audio-logo.png'
@@ -16,52 +17,52 @@ import digitaloceanLogo from '../assets/digitalocean-logo.png'
 const allIcons = {
   gatsby: {
     logo: gatsbyLogo,
-    label: 'Gatsby'
+    label: 'Gatsby',
   },
   react: {
     logo: reactLogo,
-    label: 'React'
+    label: 'React',
   },
   audio: {
     logo: audioLogo,
-    label: 'Web audio'
+    label: 'Web audio',
   },
   howler: {
     logo: howlerLogo,
-    label: 'Howler'
+    label: 'Howler',
   },
   html5: {
     logo: html5Logo,
-    label: 'html5'
+    label: 'html5',
   },
   mobx: {
     logo: mobxLogo,
-    label: 'Mobx'
+    label: 'Mobx',
   },
   node: {
     logo: nodeLogo,
-    label: 'Node'
+    label: 'Node',
   },
   socketio: {
     logo: socketioLogo,
-    label: 'Socket.IO'
+    label: 'Socket.IO',
   },
   styled: {
     logo: styledLogo,
-    label: 'Styled components'
+    label: 'Styled components',
   },
   synaptic: {
     logo: synapticLogo,
-    label: 'Synaptic.js'
+    label: 'Synaptic.js',
   },
   vue: {
     logo: vueLogo,
-    label: 'Vue'
+    label: 'Vue',
   },
   digitalocean: {
     logo: digitaloceanLogo,
-    label: 'DigitalOcean'
-  }
+    label: 'DigitalOcean',
+  },
 }
 
 const Container = styled.div`
@@ -70,9 +71,9 @@ const Container = styled.div`
   vertical-align: bottom;
 
   ${media.tablet`
-    width: ${props => props.wide ? '100%' : '50%'};
+    width: ${props => (props.wide ? '100%' : '50%')};
     height: 40vw;
-  `}
+  `};
 `
 
 const Image = styled.div`
@@ -87,8 +88,8 @@ const Image = styled.div`
   background-repeat: no-repeat;
 
   ${media.tablet`
-  height: 100%;
-`}
+    height: 100%;
+  `}
 `
 
 const Overlay = styled.div`
@@ -100,9 +101,9 @@ const Overlay = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding: 80px;
-  padding-right: 10px;
+  padding-right: 20px;
   box-sizing: border-box;
-  background-color: rgba(255,255,255, 0.85);
+  background-color: rgba(255, 255, 255, 1);
   transition: opacity 250ms;
 
   ${media.tablet`
@@ -110,14 +111,12 @@ const Overlay = styled.div`
     top: 0;
     opacity: 0;
     padding: 80px;
-  `}
-
-  h2 {
+  `} h2 {
     margin: 0;
   }
 
   p {
-    margin: 18px 0;
+    margin: 24px 0;
   }
 
   a {
@@ -135,12 +134,19 @@ const Overlay = styled.div`
 const Icons = styled.div`
   display: flex;
   margin-top: 24px;
-`;
+  background-color: white;
+  padding-top: 12px;
+
+  ${media.tablet`
+    padding: 12px;
+  `} > *:not(:last-child) {
+    margin-right: 14px;
+  }
+`
 
 const IconText = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 8px;
 
   img {
     height: 16px;
@@ -149,21 +155,23 @@ const IconText = styled.div`
 
   span {
     font-size: 12px;
+    letter-spacing: 0;
   }
-`;
+`
 
-const Project = ({imageSrc, title, description, icons, link}) => {
-
+const Project = ({ imageSrc, title, description, icons, link }) => {
   return (
     <Container>
-      <Image src={imageSrc}/>
+      <Image src={imageSrc} />
       <Overlay>
         <h2>{title}</h2>
         <p>{description}</p>
-        <a href={link} target="_blank">Demo</a>
+        <a href={link} target="_blank">
+          Demo
+        </a>
         <Icons>
           {icons.map(icon => (
-            <IconText key={icon} >
+            <IconText key={icon}>
               <img alt="" src={allIcons[icon].logo} />
               <span>{allIcons[icon].label}</span>
             </IconText>
@@ -171,7 +179,7 @@ const Project = ({imageSrc, title, description, icons, link}) => {
         </Icons>
       </Overlay>
     </Container>
-  );
+  )
 }
 
-export default Project;
+export default Project
