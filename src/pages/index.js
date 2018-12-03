@@ -18,6 +18,8 @@ import noisebox from '../assets/noisebox.png'
 import aipong from '../assets/aipong.png'
 import spaceship from '../assets/spaceship.png'
 
+import previewImage from '../assets/preview.png'
+
 const HeroText = styled.div`
   font-size: 2em;
   ${media.tablet`
@@ -149,6 +151,7 @@ const IndexPage = () => (
       </HeroText>
     </Section>
     <Section wide>
+      <img src={previewImage} style={{ display: 'none' }} />
       {projects.map(project => <Project key={project.title} {...project} />)}
       <Image src={music} wide>
         <TextBox noPaddingX>

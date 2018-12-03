@@ -20,11 +20,14 @@ const Layout = ({ children, data }) => (
         ]}
         link={[
           { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
-          { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat}' }
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css?family=Montserrat}',
+          },
         ]}
       />
       <Header />
-      <main style={{zIndex: -1}}>{children()}</main>
+      <main style={{ zIndex: -1 }}>{children()}</main>
       <Footer>{data.site.siteMetadata.footerText}</Footer>
     </div>
   </ThemeProvider>
