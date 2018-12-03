@@ -19,7 +19,10 @@ const Layout = ({ children, data }) => (
         meta={[
           { name: 'description', content: "Luftare's homepage" },
           { name: 'keywords', content: 'Luftare, website' },
-          { property: 'og:image', content: previewImage },
+          {
+            property: 'og:image',
+            content: `https://www.luftare.com${previewImage}`,
+          },
           {
             property: 'og:description',
             content: "Luftare's developer portfolio.",
