@@ -70,7 +70,7 @@ const projects = [
   {
     title: '3d',
     description:
-      'I wrote a 3d rendering engine out of curiosity. The rendering is powered by html 2d canvas leaving all the trigonometry and geometry puzzles for me to solve.',
+      'I wrote a 3d rendering engine out of curiosity. The rendering is powered by html 2d canvas leaving all the trigonometry and geometry puzzles to be handled by vanilla JS.',
     link: 'https://luftare.tk/3d/',
     icons: ['html5'],
     imageSrc: threed,
@@ -78,7 +78,7 @@ const projects = [
   {
     title: 'Hearing test',
     description:
-      "The test generates a report of both ears' spectral sensitivity. The test has proven to produce highly correlating results compared to tests conducted by healthcare professionals.",
+      "The test generates a report of both ears' spectral sensitivity. The test has proven to produce reasonably matching results compared to tests conducted by healthcare professionals.",
     link: 'https://www.heartest.tk/',
     icons: ['html5', 'audio'],
     imageSrc: hearing,
@@ -86,7 +86,7 @@ const projects = [
   {
     title: 'Drum machine',
     description:
-      'A simple drum sampler. Tap the pads to trigger drum sounds or record a beat on the fly. Includes metronome undo and change of tempo.',
+      'A simple drum sampler. Tap the pads to trigger drum sounds or record a beat on the fly. It features a metronome, undo and changing of tempo.',
     link: 'https://luftare.tk/drum/',
     icons: ['react', 'audio'],
     imageSrc: drum,
@@ -118,7 +118,7 @@ const projects = [
   {
     title: 'Real-time multiplayer shooter',
     description:
-      'I have a goal to create a real-time game with websocket. So far the results are promising but not satisfactory. This game also experiments how canvas and html elements can be used in tandem to produce performant game graphics.',
+      'This is an attempt to produce real-time multiplayer game with websocket connection. It is an attempt to challenge the common consensus that TCP is not fast enough for real-time multiplayer games. This game also experiments different ways of using both canvas and css-driven elements to produce performant game graphics.',
     link: 'http://www.lfbg.tk/',
     icons: ['html5', 'node', 'socketio', 'digitalocean'],
     imageSrc: lfbg,
