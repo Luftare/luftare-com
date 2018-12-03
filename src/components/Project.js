@@ -25,15 +25,15 @@ const allIcons = {
   },
   audio: {
     logo: audioLogo,
-    label: 'Web audio',
+    label: 'Web Audio API',
   },
   howler: {
     logo: howlerLogo,
-    label: 'Howler',
+    label: 'howler.js',
   },
   html5: {
     logo: html5Logo,
-    label: 'html5',
+    label: 'HTML5',
   },
   mobx: {
     logo: mobxLogo,
@@ -49,7 +49,7 @@ const allIcons = {
   },
   styled: {
     logo: styledLogo,
-    label: 'Styled components',
+    label: 'styled-components',
   },
   synaptic: {
     logo: synapticLogo,
@@ -136,10 +136,20 @@ const Icons = styled.div`
   margin-top: 24px;
   background-color: white;
   padding-top: 12px;
+  flex-direction: column;
 
   > *:not(:last-child) {
-    margin-right: 14px;
+    margin-bottom: 14px;
   }
+
+  ${media.tablet`
+    flex-direction: row;
+
+    > *:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 14px;
+    }
+  `};
 `
 
 const IconText = styled.div`
@@ -148,7 +158,7 @@ const IconText = styled.div`
 
   img {
     height: 16px;
-    margin-right: 4px;
+    margin-right: 6px;
   }
 
   span {
