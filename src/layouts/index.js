@@ -9,6 +9,8 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import { theme } from '../styles'
 
+import previewImage from '../assets/preview.png'
+
 const Layout = ({ children, data }) => (
   <ThemeProvider theme={theme}>
     <div>
@@ -17,6 +19,15 @@ const Layout = ({ children, data }) => (
         meta={[
           { name: 'description', content: "Luftare's homepage" },
           { name: 'keywords', content: 'Luftare, website' },
+          { property: 'og:image', content: previewImage },
+          {
+            property: 'og:description',
+            content: "Luftare's developer portfolio.",
+          },
+          {
+            property: 'og:url',
+            content: 'https://luftare.com',
+          },
         ]}
         link={[
           { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
