@@ -137,9 +137,7 @@ const Icons = styled.div`
   background-color: white;
   padding-top: 12px;
 
-  ${media.tablet`
-    padding: 12px;
-  `} > *:not(:last-child) {
+  > *:not(:last-child) {
     margin-right: 14px;
   }
 `

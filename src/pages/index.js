@@ -116,9 +116,9 @@ const projects = [
     imageSrc: pirkko,
   },
   {
-    title: 'Real-time multiplayer shooter',
+    title: 'Real-time multiplayer game',
     description:
-      'This is an attempt to produce real-time multiplayer game with websocket connection. It is an attempt to challenge the common consensus that TCP is not fast enough for real-time multiplayer games. This game also experiments different ways of using both canvas and css-driven elements to produce performant game graphics.',
+      'This is an attempt to produce real-time multiplayer game with websocket connection. It attempts to challenge the common consensus that TCP is not applicable for real-time multiplayer games. It also experiments combining canvas and css animations to produce performant graphics.',
     link: 'http://www.lfbg.tk/',
     icons: ['html5', 'node', 'socketio', 'digitalocean'],
     imageSrc: lfbg,
