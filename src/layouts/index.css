@@ -8,6 +8,14 @@ body {
   word-spacing: 2px;
 }
 
+*::selection {
+  background: #9ed;
+}
+
+*::-moz-selection {
+  background: #9ed;
+}
+
 @keyframes slideFromLeft {
   0% {
     transform: translateX(-80px);

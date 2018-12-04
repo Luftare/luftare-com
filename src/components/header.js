@@ -20,12 +20,11 @@ const Logo = styled.div`
   color: ${props => props.theme.white};
   padding: 16px;
   animation: ${props => (props.aside ? slideFromLeft : 'none')} 400ms;
-  margin-top: ${props =>
-    props.aside ? 0 : props.theme.gutter.l};
+  margin-top: ${props => (props.aside ? 0 : props.theme.gutter.l)};
   ${media.desktop`
     margin-top: ${props =>
       props.aside ? props.theme.gutter.m : props.theme.gutter.l};
-  `}
+  `};
 `
 
 export default class Header extends React.Component {
@@ -40,9 +39,13 @@ export default class Header extends React.Component {
   }
 
   componentDidMount = () => {
-    window.addEventListener('scroll', () => {
+    const handleLogoPositioning = () => {
       const isMobile = innerWidth < sizes.tablet
-      const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
+      const scrollTop = Math.max(
+        window.pageYOffset,
+        document.documentElement.scrollTop,
+        document.body.scrollTop
+      )
       let logoAside = scrollTop > 20
 
       if (this.state.logoAside !== logoAside) {
@@ -53,7 +56,9 @@ export default class Header extends React.Component {
       if (this.state.width !== width) {
         this.setState({ width })
       }
-    })
+    }
+
+    window.addEventListener('scroll', handleLogoPositioning)
   }
 
   render() {

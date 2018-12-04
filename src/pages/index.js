@@ -68,62 +68,6 @@ const projects = [
     imageSrc: cloudbunnySrc,
   },
   {
-    title: '3d',
-    description:
-      'I wrote a 3d rendering engine out of curiosity. The rendering is powered by html 2d canvas leaving all the trigonometry and geometry puzzles to be handled by vanilla JS.',
-    link: 'https://luftare.tk/3d/',
-    icons: ['html5'],
-    imageSrc: threed,
-  },
-  {
-    title: 'Hearing test',
-    description:
-      "The test generates a report of both ears' spectral sensitivity. The test has proven to produce reasonably matching results compared to tests conducted by healthcare professionals.",
-    link: 'https://www.heartest.tk/',
-    icons: ['html5', 'audio'],
-    imageSrc: hearing,
-  },
-  {
-    title: 'Drum machine',
-    description:
-      'A simple drum sampler. Tap the pads to trigger drum sounds or record a beat on the fly. It features a metronome, undo and changing of tempo.',
-    link: 'https://luftare.tk/drum/',
-    icons: ['react', 'audio'],
-    imageSrc: drum,
-  },
-  {
-    title: 'Minigolf adventure game',
-    description:
-      "What comes when a minigolf game and an RPG game is crossbred? I wanted to build a game with lots of levels that aren't too coupled to the engine. In the end it was easy to build new levels and a storyline with a dedicated level editor.",
-    link: 'https://luftare.github.io/wall-bounce/',
-    icons: ['vue'],
-    imageSrc: minigolf,
-  },
-  {
-    title: 'Wacky music generator',
-    description:
-      'I believe that in order to produce silly music you need matching instruments for the purpose. You can draw the riffs just like in paint and write lyrics to a textbox. I have synthesised all the drum sounds with web audio api.',
-    link: 'https://trusting-sinoussi-6c3faf.netlify.com/',
-    icons: ['react', 'audio'],
-    imageSrc: noisebox,
-  },
-  {
-    title: 'Disc golf app',
-    description:
-      'Another web app project aiming to produce native mobile app user experience. Offline features make it possible to use the app with limited network connectivity.',
-    link: 'https://pirkko.tk/',
-    icons: ['react', 'mobx'],
-    imageSrc: pirkko,
-  },
-  {
-    title: 'Real-time multiplayer game',
-    description:
-      'This is an attempt to produce real-time multiplayer game with websocket connection. It attempts to challenge the common consensus that TCP is not applicable for real-time multiplayer games. It also experiments combining canvas and css animations to produce performant graphics.',
-    link: 'http://www.lfbg.tk/',
-    icons: ['html5', 'node', 'socketio', 'digitalocean'],
-    imageSrc: lfbg,
-  },
-  {
     title: 'AI rocket landing',
     description:
       'I programmed this machine learning demo to visualize the learning process of a neural network. A genetic algorithm is applied to train a space rocket to smoothly land with the minimum possible fuel consumption.',
@@ -134,10 +78,66 @@ const projects = [
   {
     title: 'AI pong player',
     description:
-      'I have programmed a few "AI" opponents to play against. The problem is that the opponent is then only as good as it was programmed to be. This is a demo where the opponent learns to play the game by itself.',
+      'I have programmed a few games featuring "AI" opponents to play against and the opponents are just following simple if/else heuristics. The problem is that the opponent is then only as good as it was programmed to be. In this demo machine learning is applied to train the opponent\'s neural networks.',
     link: 'https://luftare.github.io/ai-pong-paper/',
     icons: ['html5', 'synaptic'],
     imageSrc: aipong,
+  },
+  {
+    title: '3d',
+    description:
+      'I wrote a 3d rendering engine out of curiosity. The rendering is powered by 2d canvas leaving all the trigonometry and geometry puzzles to be handled with vanilla JS.',
+    link: 'https://luftare.tk/3d/',
+    icons: ['html5'],
+    imageSrc: threed,
+  },
+  {
+    title: 'Real-time multiplayer',
+    description:
+      'It is a real-time multiplayer game powered by websocket connection. It attempts to challenge the common consensus that TCP is not applicable for real-time multiplayer games. It also experiments combining canvas and css animations to produce performant graphics.',
+    link: 'http://www.lfbg.tk/',
+    icons: ['html5', 'node', 'socketio', 'digitalocean'],
+    imageSrc: lfbg,
+  },
+  {
+    title: 'Disc golf app',
+    description:
+      'A web app aiming to produce native mobile app user experience for disc golf players. Offline features make it possible to use the app with limited network connectivity.',
+    link: 'https://pirkko.tk/',
+    icons: ['react', 'mobx'],
+    imageSrc: pirkko,
+  },
+  {
+    title: 'Hearing test',
+    description:
+      "How well can you hear? The test generates a report of both ears' relative spectral sensitivity as a graph. The test has proven to produce similar results compared to tests conducted by healthcare professionals.",
+    link: 'https://www.heartest.tk/',
+    icons: ['html5', 'audio'],
+    imageSrc: hearing,
+  },
+  {
+    title: 'Minigolf adventure game',
+    description:
+      "What comes when a minigolf game and an RPG game is crossbred? I wanted to build a game with lots of levels that aren't too coupled with the game engine. A dedicated level editor made it easy to write the story and add new levels to the game.",
+    link: 'https://luftare.github.io/wall-bounce/',
+    icons: ['vue'],
+    imageSrc: minigolf,
+  },
+  {
+    title: 'Drum machine',
+    description:
+      'A simple drum sampler. Tap the pads to trigger drum sounds or record a beat on the fly. It features a metronome, undo and changing of tempo.',
+    link: 'https://luftare.tk/drum/',
+    icons: ['react', 'audio'],
+    imageSrc: drum,
+  },
+  {
+    title: 'Wacky music generator',
+    description:
+      'In order to produce bonkers music you need equivalent instruments for the job. Create beat, draw  riffs just like in paint and write lyrics to a textbox to hear the next UG hit. Its cool how much browser(s) can do nowadays.',
+    link: 'https://trusting-sinoussi-6c3faf.netlify.com/',
+    icons: ['react', 'audio'],
+    imageSrc: noisebox,
   },
 ]
 
