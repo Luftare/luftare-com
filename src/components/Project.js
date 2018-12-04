@@ -69,10 +69,17 @@ const Container = styled.div`
   position: relative;
   display: inline-block;
   vertical-align: bottom;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
   ${media.tablet`
-    width: ${props => (props.wide ? '100%' : '50%')};
+    flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
     height: 40vw;
+
+    > * {
+      width: 50%;
+    }
   `};
 `
 
@@ -80,7 +87,6 @@ const Image = styled.div`
   align-items: flex-end;
   justify-content: center;
   display: block;
-  width: 100%;
   height: 70vw;
   background-image: url('${props => props.src}');
   background-size: cover;
@@ -96,21 +102,17 @@ const Overlay = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
   justify-content: center;
   align-items: flex-start;
   padding: 80px;
   padding-right: 20px;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 1);
-  transition: opacity 250ms;
 
   ${media.tablet`
-    position: absolute;
-    top: 0;
-    opacity: 0;
     padding: 80px;
+  `} ${media.desktop`
+    padding: 0 160px;
   `} h2 {
     margin: 0;
   }
@@ -124,10 +126,6 @@ const Overlay = styled.div`
     font-weight: bold;
     text-decoration: underline;
     color: #2b7;
-  }
-
-  :hover {
-    opacity: 1;
   }
 `
 
@@ -167,9 +165,9 @@ const IconText = styled.div`
   }
 `
 
-const Project = ({ imageSrc, title, description, icons, link }) => {
+const Project = ({ imageSrc, title, description, icons, link, reverse }) => {
   return (
-    <Container>
+    <Container reverse={reverse}>
       <Image src={imageSrc} />
       <Overlay>
         <h2>{title}</h2>

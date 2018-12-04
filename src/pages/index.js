@@ -160,7 +160,9 @@ const IndexPage = () => (
           </Grid>
         </TextBox>
       </Image>
-      {projects.map(project => <Project key={project.title} {...project} />)}
+      {projects.map((project, i) => (
+        <Project key={project.title} {...project} reverse={i % 2 === 0} />
+      ))}
       <Image src={daw} wide height="200px" tabletHeight="350px">
         <TextBox noPaddingX>
           <Grid>

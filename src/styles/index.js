@@ -1,7 +1,7 @@
 import { css, keyframes } from 'styled-components'
 
 export const sizes = {
-  desktop: 1090,
+  desktop: 1400,
   tablet: 950,
 }
 
