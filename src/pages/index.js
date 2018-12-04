@@ -6,10 +6,12 @@ import MusicBox from '../components/musicbox'
 import Project from '../components/Project'
 import { media } from '../styles'
 
+import daw from '../assets/daw.png'
+import ide from '../assets/ide.png'
+
 import cloudbunnySrc from '../assets/cloudbunny.png'
 import drum from '../assets/drum.png'
 import threed from '../assets/threed.png'
-import daw from '../assets/daw.png'
 import pirkko from '../assets/pirkko.png'
 import hearing from '../assets/hearing.png'
 import minigolf from '../assets/minigolf.png'
@@ -38,28 +40,25 @@ const Image = styled.div`
   background-repeat: no-repeat;
   ${media.tablet`
     width: ${props => (props.wide ? '100%' : '50%')};
-    height: ${({ height }) => height || '40vw'};
+    height: ${({ tabletHeight, height }) => tabletHeight || height || '40vw'};
   `}
 `
 
 const TextBox = styled.span`
   display: flex;
-  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   font-size: 4em;
   color: ${props => props.theme.white};
-  padding: ${props => (props.noPaddingX ? '16px 0' : '16px 24px')};
-  background-color: rgba(55, 255, 205, 0.7);
+  background-color: ${({ background }) =>
+    background || 'rgba(105, 245, 205, 0.9)'};
   width: 100%;
   height: 100%;
 
   ${media.tablet`
     font-size: 5em;
-    padding: ${props => (props.noPaddingX ? '16px 0' : '16px 24px')};
   `} ${media.desktop`
     font-size: 6em;
-    padding: ${props => (props.noPaddingX ? '24px 0' : '24px 36px')};
   `};
 `
 
@@ -154,10 +153,19 @@ const IndexPage = () => (
       </HeroText>
     </Section>
     <Section wide>
+      <Image src={ide} wide height="200px" tabletHeight="350px">
+        <TextBox noPaddingX background="rgba(125, 25, 255, 0.6)">
+          <Grid>
+            <span>dev</span>
+          </Grid>
+        </TextBox>
+      </Image>
       {projects.map(project => <Project key={project.title} {...project} />)}
-      <Image src={daw} wide height="400px">
+      <Image src={daw} wide height="200px" tabletHeight="350px">
         <TextBox noPaddingX>
-          <span>music</span>
+          <Grid>
+            <span>music</span>
+          </Grid>
         </TextBox>
       </Image>
     </Section>
