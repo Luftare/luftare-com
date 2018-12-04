@@ -59,6 +59,7 @@ export default class Header extends React.Component {
     }
 
     window.addEventListener('scroll', handleLogoPositioning)
+    window.addEventListener('resize', handleLogoPositioning)
   }
 
   render() {
