@@ -11,6 +11,10 @@ import { theme } from '../styles'
 
 import previewImage from '../assets/preview.png'
 
+import linkedin from '../assets/linkedin.png'
+import soundcloud from '../assets/soundcloud.png'
+import github from '../assets/github.png'
+
 const Layout = ({ children, data }) => (
   <ThemeProvider theme={theme}>
     <div>
@@ -42,7 +46,17 @@ const Layout = ({ children, data }) => (
       />
       <Header />
       <main style={{ zIndex: -1 }}>{children()}</main>
-      <Footer>{data.site.siteMetadata.footerText}</Footer>
+      <Footer>
+        <a href="https://github.com/Luftare">
+          <img className="some-icon" src={github} />
+        </a>
+        <a href="https://fi.linkedin.com/in/ilmarikoskinen">
+          <img className="some-icon" src={linkedin} />
+        </a>
+        <a href="https://soundcloud.com/luftareforsig">
+          <img className="some-icon" src={soundcloud} />
+        </a>
+      </Footer>
     </div>
   </ThemeProvider>
 )

@@ -7,5 +7,15 @@ export default styled.div`
   background: ${props => props.theme.black};
   color: ${props => props.theme.grey};
   padding: ${props => props.theme.gutter.l} 16px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .some-icon {
+    height: 40px;
+  }
+
+  > *:not(:last-child) {
+    margin-right: 16px;
+  }
 `
