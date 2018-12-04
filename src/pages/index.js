@@ -9,7 +9,7 @@ import { media } from '../styles'
 import cloudbunnySrc from '../assets/cloudbunny.png'
 import drum from '../assets/drum.png'
 import threed from '../assets/threed.png'
-import music from '../assets/music.jpg'
+import daw from '../assets/daw.png'
 import pirkko from '../assets/pirkko.png'
 import hearing from '../assets/hearing.png'
 import minigolf from '../assets/minigolf.png'
@@ -31,29 +31,34 @@ const Image = styled.div`
   justify-content: center;
   display: inline-flex;
   width: 100%;
-  height: 80vw;
+  height: ${({ height }) => height || '80vw'};
   background-image: url('${props => props.src}');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   ${media.tablet`
     width: ${props => (props.wide ? '100%' : '50%')};
-    height: 40vw;
+    height: ${({ height }) => height || '40vw'};
   `}
 `
 
 const TextBox = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
-  font-size: 2em;
-  color: ${props => props.theme.black};
+  font-size: 4em;
+  color: ${props => props.theme.white};
   padding: ${props => (props.noPaddingX ? '16px 0' : '16px 24px')};
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(55, 255, 205, 0.7);
   width: 100%;
+  height: 100%;
+
   ${media.tablet`
-    font-size: 2.2em;
+    font-size: 5em;
     padding: ${props => (props.noPaddingX ? '16px 0' : '16px 24px')};
   `} ${media.desktop`
-    font-size: 3em;
+    font-size: 6em;
     padding: ${props => (props.noPaddingX ? '24px 0' : '24px 36px')};
   `};
 `
@@ -150,11 +155,9 @@ const IndexPage = () => (
     </Section>
     <Section wide>
       {projects.map(project => <Project key={project.title} {...project} />)}
-      <Image src={music} wide>
+      <Image src={daw} wide height="400px">
         <TextBox noPaddingX>
-          <Grid>
-            <span>music</span>
-          </Grid>
+          <span>music</span>
         </TextBox>
       </Image>
     </Section>
