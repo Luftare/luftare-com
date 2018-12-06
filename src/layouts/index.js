@@ -7,6 +7,7 @@ import './index.css'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Grid from '../components/grid'
 import { theme } from '../styles'
 
 import previewImage from '../assets/preview.png'
@@ -47,15 +48,25 @@ const Layout = ({ children, data }) => (
       <Header />
       <main style={{ zIndex: -1 }}>{children()}</main>
       <Footer>
-        <a href="https://github.com/Luftare">
-          <img className="some-icon" src={github} />
-        </a>
-        <a href="https://fi.linkedin.com/in/ilmarikoskinen">
-          <img className="some-icon" src={linkedin} />
-        </a>
-        <a href="https://soundcloud.com/luftareforsig">
-          <img className="some-icon" src={soundcloud} />
-        </a>
+        <Grid>
+          <div className="icon-bar">
+            <a href="https://github.com/Luftare">
+              <img className="some-icon" src={github} />
+            </a>
+            <a href="https://fi.linkedin.com/in/ilmarikoskinen">
+              <img className="some-icon" src={linkedin} />
+            </a>
+            <a href="https://soundcloud.com/luftareforsig">
+              <img className="some-icon" src={soundcloud} />
+            </a>
+          </div>
+          <div className="contact-details">
+            <div className="contact-details__phone">040 76777 32</div>
+            <div className="contact-details__email">
+              ilmari.koskinen1🐣gmail.com
+            </div>
+          </div>
+        </Grid>
       </Footer>
     </div>
   </ThemeProvider>

@@ -6,16 +6,23 @@ import Grid from './grid'
 export default styled.div`
   background: ${props => props.theme.black};
   color: ${props => props.theme.grey};
-  padding: ${props => props.theme.gutter.l} 16px;
   display: flex;
+  padding: 100px 0;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  .some-icon {
-    height: 40px;
+  .icon-bar {
+    margin-bottom: 24px;
   }
 
-  > *:not(:last-child) {
+  .some-icon {
+    height: 40px;
     margin-right: 16px;
+    filter: grayscale(100%);
+
+    :hover {
+      filter: unset;
+    }
   }
 `
