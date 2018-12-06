@@ -8,6 +8,7 @@ import { media } from '../styles'
 
 import daw from '../assets/daw.png'
 import ide from '../assets/ide.png'
+import instruments from '../assets/instruments.jpeg'
 
 import cloudbunnySrc from '../assets/cloudbunny.png'
 import drum from '../assets/drum.png'
@@ -145,6 +146,24 @@ const projects = [
   },
 ]
 
+const BackgroundImage = styled.div`
+  background-image: url('${props => props.src}');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`
+
+const Split = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+
+  ${media.tablet`
+    grid-auto-flow: dense;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  `};
+`
+
 const IndexPage = () => (
   <Grid>
     <Section airy>
@@ -171,8 +190,13 @@ const IndexPage = () => (
         </TextBox>
       </Image>
     </Section>
-    <Section>
-      <MusicBox />
+    <Section wide>
+      <Split>
+        <Grid>
+          <MusicBox />
+        </Grid>
+        <BackgroundImage src={instruments} />
+      </Split>
     </Section>
   </Grid>
 )
