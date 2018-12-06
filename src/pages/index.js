@@ -183,7 +183,7 @@ const IndexPage = () => (
         <Project key={project.title} {...project} reverse={i % 2 === 0} />
       ))}
       <Image src={daw} wide height="200px" tabletHeight="350px">
-        <TextBox noPaddingX>
+        <TextBox noPaddingX background="rgba(255, 185, 22, 0.85)">
           <Grid>
             <span>music</span>
           </Grid>
