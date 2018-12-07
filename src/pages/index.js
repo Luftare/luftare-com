@@ -20,6 +20,8 @@ import lfbg from '../assets/lfbg.png'
 import noisebox from '../assets/noisebox.png'
 import aipong from '../assets/aipong.png'
 import spaceship from '../assets/spaceship.png'
+import sail from '../assets/sail.png'
+import trees from '../assets/trees.png'
 
 const HeroText = styled.div`
   font-size: 2em;
@@ -127,6 +129,22 @@ const projects = [
     link: 'https://luftare.github.io/wall-bounce/',
     icons: ['vue'],
     imageSrc: minigolf,
+  },
+  {
+    title: 'Plant evolution',
+    description:
+      'What makes plants to have unique shapes? Here the process of evolution is demonstrated with virtual plants. Plants interact with underlying plants by shading them and the successfull individuals seed more plants. Physical constraints are applied to wither weak structures.',
+    link: 'https://luftare.github.io/trees/',
+    icons: ['html5'],
+    imageSrc: trees,
+  },
+  {
+    title: 'Sailboat physics',
+    description:
+      'How can you sail into headwind? To fully grasp the idea I wrote this sailboat model featuring procedural islands, seafloor heightmap and a depth sounder.',
+    link: 'https://luftare.github.io/sailboat-simulation/',
+    icons: ['html5'],
+    imageSrc: sail,
   },
   {
     title: 'Drum machine',
