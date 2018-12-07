@@ -13,6 +13,7 @@ import styledLogo from '../assets/styled-logo.png'
 import synapticLogo from '../assets/synaptic-logo.png'
 import vueLogo from '../assets/vue-logo.png'
 import digitaloceanLogo from '../assets/digitalocean-logo.png'
+import mysqlLogo from '../assets/mysql-logo.jpg'
 
 const allIcons = {
   gatsby: {
@@ -62,6 +63,10 @@ const allIcons = {
   digitalocean: {
     logo: digitaloceanLogo,
     label: 'DigitalOcean',
+  },
+  mysql: {
+    logo: mysqlLogo,
+    label: 'MySQL',
   },
 }
 
@@ -122,6 +127,7 @@ const Overlay = styled.div`
   }
 
   a {
+    margin-bottom: 24px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: underline;
@@ -131,7 +137,6 @@ const Overlay = styled.div`
 
 const Icons = styled.div`
   display: flex;
-  margin-top: 24px;
   background-color: white;
   padding-top: 12px;
   flex-direction: column;
@@ -172,9 +177,11 @@ const Project = ({ imageSrc, title, description, icons, link, reverse }) => {
       <Overlay>
         <h2>{title}</h2>
         <p>{description}</p>
-        <a href={link} target="_blank">
-          Demo
-        </a>
+        {link && (
+          <a href={link} target="_blank">
+            Demo
+          </a>
+        )}
         <Icons>
           {icons.map(icon => (
             <IconText key={icon}>

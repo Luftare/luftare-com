@@ -22,6 +22,8 @@ import aipong from '../assets/aipong.png'
 import spaceship from '../assets/spaceship.png'
 import sail from '../assets/sail.png'
 import trees from '../assets/trees.png'
+import snowboard from '../assets/snowboard.png'
+import manager from '../assets/manager.png'
 
 const HeroText = styled.div`
   font-size: 2em;
@@ -123,6 +125,14 @@ const projects = [
     imageSrc: hearing,
   },
   {
+    title: 'Project manager',
+    description:
+      "A simple project management software where users can login and be assigned to projects. Users have profiles and projects have deadlines. It's a project management software so it's grey and a little boring.",
+    link: '',
+    icons: ['html5', 'vue', 'node', 'mysql'],
+    imageSrc: manager,
+  },
+  {
     title: 'Minigolf adventure game',
     description:
       "What comes when a minigolf game and an RPG game is crossbred? I wanted to build a game with lots of levels that aren't too coupled with the game engine. A dedicated level editor made it easy to write the story and add new levels to the game.",
@@ -145,6 +155,14 @@ const projects = [
     link: 'https://luftare.github.io/sailboat-simulation/',
     icons: ['html5'],
     imageSrc: sail,
+  },
+  {
+    title: 'Snowboard',
+    description:
+      "As an ex-snowboarder this is one of my favourite game prototypes I've put together. The physics mostly revolve around vector dot and cross products. I also experimented with some fake 3d techniques to boost the immersion of the mostly 2d game.",
+    link: 'https://luftare.github.io/snowboard/',
+    icons: ['html5', 'howler'],
+    imageSrc: snowboard,
   },
   {
     title: 'Drum machine',
