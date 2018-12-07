@@ -100,7 +100,7 @@ const projects = [
     title: 'Real-time multiplayer',
     description:
       'It is a real-time multiplayer game powered by websocket connection. It attempts to challenge the common consensus that TCP is not applicable for real-time multiplayer games. It also experiments combining canvas and css animations to produce performant graphics.',
-    link: 'http://www.lfbg.tk/',
+    link: 'https://lfbg.herokuapp.com/',
     icons: ['html5', 'node', 'socketio', 'digitalocean'],
     imageSrc: lfbg,
   },
