@@ -143,7 +143,7 @@ const projects = [
   {
     title: 'Plant evolution',
     description:
-      'What makes plants to have unique shapes? Here the process of evolution is demonstrated with virtual plants. Plants interact with underlying plants by shading them and the successfull individuals seed more plants. Physical constraints are applied to wither weak structures.',
+      'What makes plants to have unique shapes? Here the process of evolution is demonstrated with virtual plants. Plants interact with underlying plants by shading them and the successful individuals seed more plants. Physical constraints are applied to wither weak structures.',
     link: 'https://luftare.github.io/trees/',
     icons: ['html5'],
     imageSrc: trees,
