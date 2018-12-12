@@ -96,7 +96,7 @@ const projects = [
     title: '3d',
     description:
       'I wrote a 3d rendering engine out of curiosity. The rendering is powered by 2d canvas leaving all the trigonometry and geometry puzzles to be handled with vanilla JS.',
-    link: 'https://luftare.tk/3d/',
+    link: 'https://luftare.github.io/vanilla-3d/',
     icons: ['html5'],
     imageSrc: threed,
   },
