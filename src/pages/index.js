@@ -72,7 +72,7 @@ const projects = [
     title: 'Cloud Bunny game',
     description:
       'I wanted to see how close to native mobile gaming feel I could get with a browser game. Vue is used to render the menu on top of an html canvas.  I have produced all the graphics and sounds.',
-    link: 'https://luftare.tk/bunny/',
+    link: '37.139.31.143/bunny/',
     icons: ['html5', 'vue', 'howler'],
     imageSrc: cloudbunnySrc,
   },
@@ -168,7 +168,7 @@ const projects = [
     title: 'Drum machine',
     description:
       'A simple drum sampler. Tap the pads to trigger drum sounds or record a beat on the fly. It features a metronome, undo and changing of tempo.',
-    link: 'https://luftare.tk/drum/',
+    link: '37.139.31.143/drum/',
     icons: ['react', 'audio'],
     imageSrc: drum,
   },
