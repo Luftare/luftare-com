@@ -168,7 +168,7 @@ const projects = [
     title: 'Drum machine',
     description:
       'A simple drum sampler. Tap the pads to trigger drum sounds or record a beat on the fly. It features a metronome, undo and changing of tempo.',
-    link: '37.139.31.143/drum/',
+    link: 'http://37.139.31.143/drum/',
     icons: ['react', 'audio'],
     imageSrc: drum,
   },
