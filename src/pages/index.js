@@ -160,7 +160,7 @@ const projects = [
     title: 'Snowboard',
     description:
       "As an ex-snowboarder this is one of my favourite game prototypes I've put together. The physics mostly revolve around vector dot and cross products. I also experimented with some fake 3d techniques to boost the immersion of the mostly 2d game.",
-    link: 'https://luftare.github.io/snowboard/',
+    link: 'https://eloquent-wozniak-c9aa9c.netlify.com/',
     icons: ['html5', 'howler'],
     imageSrc: snowboard,
   },
