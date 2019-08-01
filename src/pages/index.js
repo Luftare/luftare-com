@@ -72,7 +72,7 @@ const projects = [
     title: 'Cloud Bunny game',
     description:
       'I wanted to see how close to native mobile gaming feel I could get with a browser game. Vue is used to render the menu on top of an html canvas.  I have produced all the graphics and sounds.',
-    link: '37.139.31.143/bunny/',
+    link: 'https://admiring-meninsky-2e3688.netlify.com/',
     icons: ['html5', 'vue', 'howler'],
     imageSrc: cloudbunnySrc,
   },
