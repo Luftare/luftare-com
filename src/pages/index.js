@@ -112,7 +112,7 @@ const projects = [
     title: 'Disc golf app',
     description:
       'A web app aiming to produce native mobile app user experience for disc golf players. Offline features make it possible to use the app with limited network connectivity.',
-    link: 'https://pirkko.tk/',
+    link: 'https://mystifying-lalande-9b47dd.netlify.com/',
     icons: ['react', 'mobx'],
     imageSrc: pirkko,
   },
