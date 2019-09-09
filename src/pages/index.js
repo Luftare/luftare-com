@@ -6,25 +6,6 @@ import MusicBox from '../components/musicbox'
 import Project from '../components/Project'
 import { media } from '../styles'
 
-import daw from '../assets/daw.png'
-import ide from '../assets/ide.png'
-import instruments from '../assets/instruments.jpeg'
-
-import cloudbunnySrc from '../assets/cloudbunny.png'
-import drum from '../assets/drum.png'
-import threed from '../assets/threed.png'
-import pirkko from '../assets/pirkko.png'
-import hearing from '../assets/hearing.png'
-import minigolf from '../assets/minigolf.png'
-import lfbg from '../assets/lfbg.png'
-import noisebox from '../assets/noisebox.png'
-import aipong from '../assets/aipong.png'
-import spaceship from '../assets/spaceship.png'
-import sail from '../assets/sail.png'
-import trees from '../assets/trees.png'
-import snowboard from '../assets/snowboard.png'
-import manager from '../assets/manager.png'
-
 const HeroText = styled.div`
   font-size: 2em;
   ${media.tablet`
@@ -69,12 +50,20 @@ const TextBox = styled.span`
 
 const projects = [
   {
+    title: 'Vibin',
+    description:
+      "Vibin is a music app for anyone to enjoy music creation and jamming. It's co-created together with a team of three in which I'm the developer. It's a native iPhone app written in Swift.",
+    link: 'https://www.vibinapp.com/',
+    icons: ['swift'],
+    imageSrc: require('../assets/vibin.jpg'),
+  },
+  {
     title: 'Cloud Bunny game',
     description:
       'I wanted to see how close to native mobile gaming feel I could get with a browser game. Vue is used to render the menu on top of an html canvas.  I have produced all the graphics and sounds.',
     link: 'https://admiring-meninsky-2e3688.netlify.com/',
     icons: ['html5', 'vue', 'howler'],
-    imageSrc: cloudbunnySrc,
+    imageSrc: require('../assets/cloudbunny.png'),
   },
   {
     title: 'AI rocket landing',
@@ -82,7 +71,7 @@ const projects = [
       'I programmed this machine learning demo to visualize the learning process of a neural network. A genetic algorithm is applied to train a space rocket to smoothly land with the minimum possible fuel consumption.',
     link: 'https://luftare.github.io/AI-space-ship/',
     icons: ['html5', 'synaptic'],
-    imageSrc: spaceship,
+    imageSrc: require('../assets/spaceship.png'),
   },
   {
     title: 'AI pong player',
@@ -90,7 +79,7 @@ const projects = [
       'I have programmed a few games featuring "AI" opponents to play against and the opponents are just following simple if/else heuristics. The problem is that the opponent is then only as good as it was programmed to be. In this demo machine learning is applied to train the opponent\'s neural networks.',
     link: 'https://luftare.github.io/ai-pong-paper/',
     icons: ['html5', 'synaptic'],
-    imageSrc: aipong,
+    imageSrc: require('../assets/aipong.png'),
   },
   {
     title: '3d',
@@ -98,7 +87,7 @@ const projects = [
       'I wrote a 3d rendering engine out of curiosity. The rendering is powered by 2d canvas leaving all the trigonometry and geometry puzzles to be handled with vanilla JS.',
     link: 'https://luftare.github.io/vanilla-3d/',
     icons: ['html5'],
-    imageSrc: threed,
+    imageSrc: require('../assets/threed.png'),
   },
   {
     title: 'Real-time multiplayer',
@@ -106,7 +95,7 @@ const projects = [
       'It is a real-time multiplayer game powered by websocket connection. It attempts to challenge the common consensus that TCP is not applicable for real-time multiplayer games. It also experiments combining canvas and css animations to produce performant graphics.',
     link: 'https://lfbg.herokuapp.com/',
     icons: ['html5', 'node', 'socketio', 'digitalocean'],
-    imageSrc: lfbg,
+    imageSrc: require('../assets/lfbg.png'),
   },
   {
     title: 'Disc golf app',
@@ -114,7 +103,7 @@ const projects = [
       'A web app aiming to produce native mobile app user experience for disc golf players. Offline features make it possible to use the app with limited network connectivity.',
     link: 'https://mystifying-lalande-9b47dd.netlify.com/',
     icons: ['react', 'mobx'],
-    imageSrc: pirkko,
+    imageSrc: require('../assets/pirkko.png'),
   },
   {
     title: 'Hearing test',
@@ -122,7 +111,15 @@ const projects = [
       "How well can you hear? The test generates a report of both ears' relative spectral sensitivity as a graph. The test has proven to produce similar results compared to tests conducted by healthcare professionals.",
     link: 'https://www.heartest.tk/',
     icons: ['html5', 'audio'],
-    imageSrc: hearing,
+    imageSrc: require('../assets/hearing.png'),
+  },
+  {
+    title: 'Hirvikolari',
+    description:
+      'Would you be able to react quickly enough to avoid crashing at a moose? Even after 6 beers, 120km/h and in thick fog? Better not to try it out in wilderness but at home. Decelereation physics are somewhat based on dry weather conditions.',
+    link: 'https://luftare.github.io/hirvikolari/',
+    icons: ['html5'],
+    imageSrc: require('../assets/hirvikolari.png'),
   },
   {
     title: 'Project manager',
@@ -130,7 +127,7 @@ const projects = [
       "A simple project management software where users can login and be assigned to projects. Users have profiles and projects have deadlines. It's a project management software so it's grey and a little boring.",
     link: '',
     icons: ['html5', 'vue', 'node', 'mysql'],
-    imageSrc: manager,
+    imageSrc: require('../assets/manager.png'),
   },
   {
     title: 'Minigolf adventure game',
@@ -138,7 +135,7 @@ const projects = [
       "What comes when a minigolf game and an RPG game is crossbred? I wanted to build a game with lots of levels that aren't too coupled with the game engine. A dedicated level editor made it easy to write the story and add new levels to the game.",
     link: 'https://luftare.github.io/wall-bounce/',
     icons: ['vue'],
-    imageSrc: minigolf,
+    imageSrc: require('../assets/minigolf.png'),
   },
   {
     title: 'Plant evolution',
@@ -146,7 +143,7 @@ const projects = [
       'What makes plants to have unique shapes? Here the process of evolution is demonstrated with virtual plants. Plants interact with underlying plants by shading them and the successful individuals seed more plants. Physical constraints are applied to wither weak structures.',
     link: 'https://luftare.github.io/trees/',
     icons: ['html5'],
-    imageSrc: trees,
+    imageSrc: require('../assets/trees.png'),
   },
   {
     title: 'Sailboat physics',
@@ -154,7 +151,7 @@ const projects = [
       'How can you sail into headwind? To fully grasp the idea I wrote this sailboat model featuring procedural islands, seafloor heightmap and a depth sounder.',
     link: 'https://luftare.github.io/sailboat-simulation/',
     icons: ['html5'],
-    imageSrc: sail,
+    imageSrc: require('../assets/sail.png'),
   },
   {
     title: 'Snowboard',
@@ -162,7 +159,7 @@ const projects = [
       "As an ex-snowboarder this is one of my favourite game prototypes I've put together. The physics mostly revolve around vector dot and cross products. I also experimented with some fake 3d techniques to boost the immersion of the mostly 2d game.",
     link: 'https://eloquent-wozniak-c9aa9c.netlify.com/',
     icons: ['html5', 'howler'],
-    imageSrc: snowboard,
+    imageSrc: require('../assets/snowboard.png'),
   },
   {
     title: 'Drum machine',
@@ -170,7 +167,7 @@ const projects = [
       'A simple drum sampler. Tap the pads to trigger drum sounds or record a beat on the fly. It features a metronome, undo and changing of tempo.',
     link: 'https://nifty-wright-7f299a.netlify.com/',
     icons: ['react', 'audio'],
-    imageSrc: drum,
+    imageSrc: require('../assets/drum.png'),
   },
   {
     title: 'Wacky music generator',
@@ -178,7 +175,7 @@ const projects = [
       'In order to produce bonkers music you need equivalent instruments for the job. Create beat, draw  riffs just like in paint and write lyrics to a textbox to hear the next UG hit. Its cool how much browser(s) can do nowadays.',
     link: 'https://trusting-sinoussi-6c3faf.netlify.com/',
     icons: ['react', 'audio'],
-    imageSrc: noisebox,
+    imageSrc: require('../assets/noisebox.png'),
   },
 ]
 
@@ -208,7 +205,12 @@ const IndexPage = () => (
       </HeroText>
     </Section>
     <Section wide>
-      <Image src={ide} wide height="200px" tabletHeight="350px">
+      <Image
+        src={require('../assets/ide.png')}
+        wide
+        height="200px"
+        tabletHeight="350px"
+      >
         <TextBox noPaddingX background="rgba(125, 25, 255, 0.6)">
           <Grid>
             <span>dev</span>
@@ -218,7 +220,12 @@ const IndexPage = () => (
       {projects.map((project, i) => (
         <Project key={project.title} {...project} reverse={i % 2 === 0} />
       ))}
-      <Image src={daw} wide height="200px" tabletHeight="350px">
+      <Image
+        src={require('../assets/daw.png')}
+        wide
+        height="200px"
+        tabletHeight="350px"
+      >
         <TextBox noPaddingX background="rgba(255, 185, 22, 0.85)">
           <Grid>
             <span>music</span>
@@ -231,7 +238,7 @@ const IndexPage = () => (
         <Grid>
           <MusicBox />
         </Grid>
-        <BackgroundImage src={instruments} />
+        <BackgroundImage src={require('../assets/instruments.jpeg')} />
       </Split>
     </Section>
   </Grid>

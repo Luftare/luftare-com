@@ -14,6 +14,7 @@ import synapticLogo from '../assets/synaptic-logo.png'
 import vueLogo from '../assets/vue-logo.png'
 import digitaloceanLogo from '../assets/digitalocean-logo.png'
 import mysqlLogo from '../assets/mysql-logo.jpg'
+import swiftLogo from '../assets/swift-logo.png'
 
 const allIcons = {
   gatsby: {
@@ -67,6 +68,10 @@ const allIcons = {
   mysql: {
     logo: mysqlLogo,
     label: 'MySQL',
+  },
+  swift: {
+    logo: swiftLogo,
+    label: 'Swift',
   },
 }
 
