@@ -109,7 +109,7 @@ const projects = [
     title: 'Hearing test',
     description:
       "How well can you hear? The test generates a report of both ears' relative spectral sensitivity as a graph. The test has proven to produce similar results compared to tests conducted by healthcare professionals.",
-    link: 'https://www.heartest.tk/',
+    link: 'https://hardcore-aryabhata-359dd8.netlify.app/',
     icons: ['html5', 'audio'],
     imageSrc: require('../assets/hearing.png'),
   },
