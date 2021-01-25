@@ -20,12 +20,12 @@ const Image = styled.div`
   display: inline-flex;
   width: 100%;
   height: ${({ height }) => height || '80vw'};
-  background-image: url('${props => props.src}');
+  background-image: url('${(props) => props.src}');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   ${media.tablet`
-    width: ${props => (props.wide ? '100%' : '50%')};
+    width: ${(props) => (props.wide ? '100%' : '50%')};
     height: ${({ tabletHeight, height }) => tabletHeight || height || '40vw'};
   `}
 `
@@ -35,7 +35,7 @@ const TextBox = styled.span`
   align-items: center;
   box-sizing: border-box;
   font-size: 4em;
-  color: ${props => props.theme.white};
+  color: ${(props) => props.theme.white};
   background-color: ${({ background }) =>
     background || 'rgba(105, 245, 205, 0.9)'};
   width: 100%;
@@ -50,10 +50,18 @@ const TextBox = styled.span`
 
 const projects = [
   {
+    title: 'Songen Music Generator',
+    description:
+      "Songen is an AI-powered music generator, combining my two major ambitions - music and development. Co-created together with the Vibin team, it's available on App Store and has an ever-growing user base.",
+    link: 'https://www.songen.app/',
+    icons: ['swift'],
+    imageSrc: require('../assets/songen.jpg'),
+  },
+  {
     title: 'Vibin',
     description:
       "Vibin is a music app for anyone to enjoy music creation and jamming. It's co-created together with a team of three in which I'm the developer. It's a native iPhone app written in Swift.",
-    link: 'https://www.vibinapp.com/',
+    link: '',
     icons: ['swift'],
     imageSrc: require('../assets/vibin.jpg'),
   },
@@ -180,7 +188,7 @@ const projects = [
 ]
 
 const BackgroundImage = styled.div`
-  background-image: url('${props => props.src}');
+  background-image: url('${(props) => props.src}');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
