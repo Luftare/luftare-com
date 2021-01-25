@@ -66,7 +66,7 @@ const projects = [
     imageSrc: require('../assets/vibin.jpg'),
   },
   {
-    title: 'Shared Ride',
+    title: 'Shared a ride',
     description:
       "It's a service facilitating shared rides. Driving a private car to your sports club? Consider environment and offer a free ride to people living nearby.",
     link: 'https://sleepy-cori-895937.netlify.app/',
@@ -80,6 +80,14 @@ const projects = [
     link: 'https://admiring-meninsky-2e3688.netlify.com/',
     icons: ['html5', 'vue', 'howler'],
     imageSrc: require('../assets/cloudbunny.png'),
+  },
+  {
+    title: 'Word Game',
+    description:
+      'An excercise to design and implement a simple-to-use word game to play with friends face-to-face. Less is more.',
+    link: 'https://hardcore-morse-b1902c.netlify.app/',
+    icons: ['html5', 'vue', 'howler'],
+    imageSrc: require('../assets/alias.png'),
   },
   {
     title: 'AI rocket landing',
