@@ -55,7 +55,7 @@ const projects = [
       "Songen is an AI-powered music generator, combining my two major ambitions - music and development. Co-created together with the Vibin team, it's available on App Store and has an ever-growing user base.",
     link: 'https://www.songen.app/',
     icons: ['swift'],
-    imageSrc: require('../assets/songen.jpg'),
+    imageSrc: require('../assets/songen.png'),
   },
   {
     title: 'Vibin',
