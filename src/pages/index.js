@@ -82,7 +82,7 @@ const projects = [
     imageSrc: require('../assets/cloudbunny.png'),
   },
   {
-    title: 'Word Game',
+    title: 'Word game',
     description:
       'An excercise to design and implement a simple-to-use word game to play with friends face-to-face. Less is more.',
     link: 'https://hardcore-morse-b1902c.netlify.app/',
