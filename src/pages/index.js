@@ -122,6 +122,14 @@ const projects = [
     imageSrc: require('../assets/hearing.png'),
   },
   {
+    title: 'Diplacusis test',
+    description:
+      'Did you know that ears may interpret the same frequency inaccurately when played separately? That condition is called Diplacusis and this simple app tests the severity of it.',
+    link: 'https://romantic-heisenberg-dd6e59.netlify.app/',
+    icons: ['html5', 'audio'],
+    imageSrc: require('../assets/diplacusis.png'),
+  },
+  {
     title: 'Hirvikolari',
     description:
       'Would you be able to react quickly enough to avoid crashing at a moose? Even after 6 beers, 120km/h and in thick fog? Better not to try it out in wilderness but at home. Decelereation physics are somewhat based on dry weather conditions.',
