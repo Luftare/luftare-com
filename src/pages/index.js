@@ -66,6 +66,14 @@ const projects = [
     imageSrc: require('../assets/vibin.jpg'),
   },
   {
+    title: 'Shared Ride',
+    description:
+      "It's a service facilitating shared rides. Driving a private car to your sports club? Consider environment and offer a free ride to people living nearby.",
+    link: 'https://sleepy-cori-895937.netlify.app/',
+    icons: ['html5', 'vue'],
+    imageSrc: require('../assets/kimppakyyti.png'),
+  },
+  {
     title: 'Cloud Bunny game',
     description:
       'I wanted to see how close to native mobile gaming feel I could get with a browser game. Vue is used to render the menu on top of an html canvas.  I have produced all the graphics and sounds.',
